@@ -1,0 +1,27 @@
+<ul class="list-group">
+
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-sm-1"><b>Sr.No.</b></div>
+            <div class="col-sm-3"><b>Title</b></div>
+            <div class="col-sm-4"><b>Description</b></div>
+            <div class="col-sm-4"><b>Action</b></div>
+        </div>
+    </li>
+    <li class="list-group-item" *ngFor="let todo of todoList;let i=index">
+
+        <div class="row success ">
+
+            <div class="col-sm-1">{{i+1}}</div>
+            <div class="col-sm-3">{{todo.title}}</div>
+            <div class="col-sm-4">{{todo.description}}</div>
+            <div class="col-sm-4">
+
+
+                <button (click)="completeTodoTask(todo)" type="button" class="btn btn-success"><span  class="glyphicon glyphicon-ok">&nbsp;</span>Mark as Complete</button>
+                <button (click)="deleteTodoTask(todo.id)" type="button" class="btn btn-danger"><span  class="glyphicon glyphicon-trash">&nbsp;</span>Delete</button>
+            </div>
+        </div>
+    </li>
+
+</ul>

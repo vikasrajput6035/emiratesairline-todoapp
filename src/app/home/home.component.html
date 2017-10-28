@@ -1,0 +1,25 @@
+<div class="container">
+
+
+
+    <!--<app-add-edit-todo>
+    </app-add-edit-todo>-->
+    <h2>Emirates Airline - Todo Application</h2>
+
+    <div class="row">
+        <ul class="nav nav-tabs">
+
+            <li><a routerLink="/todo/add/newtask" routerLinkActive="active">New Task</a></li>
+            <li><a (click)="openTodoList('pending')" routerLink="/todo/status/pending" routerLinkActive="active">Pending</a></li>
+            <li><a (click)="openTodoList('completed')" routerLink="/todo/status/completed" routerLinkActive="active">Completed</a></li>
+            <li><a (click)="openTodoList('all')" routerLink="/todo/status/all" routerLinkActive="active">All</a></li>
+
+        </ul>
+    </div>
+
+    <router-outlet></router-outlet>
+    <!--<app-view-todo>
+
+    </app-view-todo>-->
+
+</div>
