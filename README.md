@@ -1,5 +1,15 @@
 # EmiratesairlineTodoapp
 
+Live Preview of Project available at:
+https://vikasrajput6035.github.io/emiratesairline-todoapp/
+(Please note that above project is not connected with any rest api so it is not fully functional but it should give idea about how the front end is look like and how it works)
+
+## How to install the project
+
+1. Download the zip file and extract it and open it in Visual code studion (you can use any IDE of your choice)
+2. run "npm install" command to install all the dependencies required for this project
+3. use "ng serve" to run this project in your browser
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
 ## Development server
@@ -26,3 +36,4 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
