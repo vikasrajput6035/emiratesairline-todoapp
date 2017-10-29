@@ -207,7 +207,7 @@ module.exports = module.exports.toString();
 /***/ 160:
 /***/ (function(module, exports) {
 
-module.exports = "<h2></h2>\n\n<form #todoForm=\"ngForm\" (ngSubmit)=\"onSubmit(todoForm)\">\n\n    <input name=\"id\" id=\"id\" type=\"hidden\" [ngModel]=\"todo.id\" />\n    <div class=\"row\">\n        <div class=\"col-md-3 form-group\">\n\n            <input name=\"title\" type=\"text\" placeholder=\"Enter your title\" class=\"form-control\" id=\"title\" [ngModel]=\"todo.title\">\n        </div>\n\n        <div class=\"form-group col-md-7\">\n\n            <input name=\"description\" type=\"text\" placeholder=\"Enter your description\" class=\"form-control\" id=\"description\" [ngModel]=\"todo.description\">\n        </div>\n\n        <div class=\"form-group col-md-2\">\n\n            <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n        </div>\n\n    </div>\n</form>"
+module.exports = "<h2></h2>\n\n<form #todoForm=\"ngForm\" (ngSubmit)=\"onSubmit(todoForm)\">\n\n\n    <div class=\"row\">\n        <div class=\"col-md-3 form-group\">\n\n            <input name=\"title\" type=\"text\" placeholder=\"Enter your title\" class=\"form-control\" id=\"title\" ngModel>\n        </div>\n\n        <div class=\"form-group col-md-7\">\n\n            <input name=\"description\" type=\"text\" placeholder=\"Enter your description\" class=\"form-control\" id=\"description\" ngModel>\n        </div>\n\n        <div class=\"form-group col-md-2\">\n\n            <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n        </div>\n\n    </div>\n</form>"
 
 /***/ }),
 
@@ -347,21 +347,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AddEditTodoComponent = (function () {
+    //public todo;
     function AddEditTodoComponent(_commonService, _router, _route) {
-        var _this = this;
+        //   _route.params.forEach(params => {
+        //   let id = this._route.snapshot.params['id'];
+        //   this._commonService.getTodoById(id).subscribe(resTodoList => this.todo = resTodoList);
+        // });
         this._commonService = _commonService;
         this._router = _router;
         this._route = _route;
-        _route.params.forEach(function (params) {
-            var id = _this._route.snapshot.params['id'];
-            _this._commonService.getTodoById(id).subscribe(function (resTodoList) { return _this.todo = resTodoList; });
-        });
     }
     AddEditTodoComponent.prototype.ngOnInit = function () { };
     AddEditTodoComponent.prototype.onSubmit = function (form) {
         var _this = this;
         var jsonFormStr = form.value;
         var status = 'pending';
+        //alert("json :: "+JSON.stringify(form.value));
         this._commonService.add_edit_Task(jsonFormStr).subscribe(function (resTodoList) {
             _this._router.navigate(['/todo/status/', status]);
         });
