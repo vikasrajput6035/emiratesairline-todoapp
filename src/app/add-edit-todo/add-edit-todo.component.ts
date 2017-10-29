@@ -10,14 +10,14 @@ import { Router,ActivatedRoute } from "@angular/router";
 })
 export class AddEditTodoComponent implements OnInit {
 
-  public todo;
+  //public todo;
 
   constructor(private _commonService:CommonserviceService, private _router:Router,private _route:ActivatedRoute) { 
 
-    _route.params.forEach(params => {
-    let id = this._route.snapshot.params['id'];
-    this._commonService.getTodoById(id).subscribe(resTodoList => this.todo = resTodoList);
-  });
+  //   _route.params.forEach(params => {
+  //   let id = this._route.snapshot.params['id'];
+  //   this._commonService.getTodoById(id).subscribe(resTodoList => this.todo = resTodoList);
+  // });
 
   }
   
@@ -28,6 +28,7 @@ export class AddEditTodoComponent implements OnInit {
    
     var jsonFormStr = form.value;
     let status:string = 'pending';
+    //alert("json :: "+JSON.stringify(form.value));
     this._commonService.add_edit_Task(jsonFormStr).subscribe(resTodoList => {
       this._router.navigate(['/todo/status/',status]);
     });

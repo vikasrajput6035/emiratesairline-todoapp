@@ -10,6 +10,7 @@ import { Router,ActivatedRoute } from "@angular/router";
 export class ViewTodoComponent implements OnInit {
 
   public todoList = [];
+  
   status:string;
   //responseJson = {"message":"","statusCode":"","object":[]};
 

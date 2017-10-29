@@ -2,16 +2,16 @@
 
 <form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
 
-    <input name="id" id="id" type="hidden" [ngModel]="todo.id" />
+
     <div class="row">
         <div class="col-md-3 form-group">
 
-            <input name="title" type="text" placeholder="Enter your title" class="form-control" id="title" [ngModel]="todo.title">
+            <input name="title" type="text" placeholder="Enter your title" class="form-control" id="title" ngModel>
         </div>
 
         <div class="form-group col-md-7">
 
-            <input name="description" type="text" placeholder="Enter your description" class="form-control" id="description" [ngModel]="todo.description">
+            <input name="description" type="text" placeholder="Enter your description" class="form-control" id="description" ngModel>
         </div>
 
         <div class="form-group col-md-2">
