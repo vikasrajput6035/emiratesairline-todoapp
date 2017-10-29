@@ -2,6 +2,7 @@
 
 Live Preview of Project available at:
 https://vikasrajput6035.github.io/emiratesairline-todoapp/
+(Please note that above project is not connected with any rest api so it is not fully functional but it should give idea about how the front end is look like and how it works)
 
 ## How to install the project
 
